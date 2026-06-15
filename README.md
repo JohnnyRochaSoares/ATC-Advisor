@@ -139,14 +139,12 @@ ATC Advisor/
 
 ├── assets/
 
-
 │   └── ATC Advisor.ico
 
 └── src/
 
+   └── main.py
 
-
-&#x20;   └── main.py
 
    ├── core/
 
@@ -154,9 +152,7 @@ ATC Advisor/
        ├── logic.py
    │   ├── position.py
        └── settings.py
-
-&#x20;  │
-
+   │
 
    ├── integrations/
 
@@ -167,10 +163,9 @@ ATC Advisor/
    └── ui/
 
 
+&#x09;├── app.py
 
-&#x20;   	├── app.py 	
-
-&#x09;└── languages.py	
+	└── languages.py
 
 ```
 

@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.14"
 
-      - name: Instalar dependências
+      - name: Install Dependencies
         run: |
           pip install -r requirements.txt
           pip install pyinstaller
@@ -34,3 +34,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ATC_Advisor.zip
+	env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
