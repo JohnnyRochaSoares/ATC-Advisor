@@ -24,9 +24,21 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
-      - name: Build executable
+      - name: Build
+        shell: pwsh
         run: |
-          pyinstaller --onefile --windowed --name ATC_Advisor --icon "assets/ATC Advisor.ico" src/main.py
+          cd src
+          pyinstaller --onefile --windowed --name ATC_Advisor `
+            --paths . `
+            --hidden-import ui.app `
+            --hidden-import ui.languages `
+            --hidden-import core.logic `
+            --hidden-import core.distance `
+            --hidden-import core.position `
+            --hidden-import core.settings `
+            --hidden-import integrations.vatsim `
+            --hidden-import integrations.airports `
+            main.py
 
       - name: Create ZIP
         run: |
