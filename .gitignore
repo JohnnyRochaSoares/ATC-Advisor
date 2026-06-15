@@ -1,0 +1,9 @@
+# ==== Cache ==== #
+__pycache__/
+src/integrations/airports_cache.json
+
+# ==== User Settings ==== #
+src/settings.json
+
+# ==== Releases ==== #
+releases/

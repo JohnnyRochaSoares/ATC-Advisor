@@ -1,0 +1,4 @@
+requests~=2.32.5
+customtkinter~=5.2.2
+plyer~=2.1.0
+SimConnect~=0.4.6

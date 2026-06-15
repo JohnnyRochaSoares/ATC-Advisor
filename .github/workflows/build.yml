@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build
+        run: |
+          cd src
+          pyinstaller --onefile --windowed --name ATC_Advisor --icon="../assets/ATC Advisor.ico" main.py
+
+      - name: ZIP
+        run: |
+          Compress-Archive -Path src/dist/ATC_Advisor.exe -DestinationPath ATC_Advisor.zip
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ATC_Advisor.zip
