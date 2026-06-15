@@ -30,9 +30,8 @@ jobs:
         run: |
           Compress-Archive -Path src/dist/ATC_Advisor.exe -DestinationPath ATC_Advisor.zip
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: ATC_Advisor.zip
-	env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+	- name: Release
+  	  uses: softprops/action-gh-release@v2
+ 	  with:
+    	    files: |
+      	      ATC_Advisor.zip
