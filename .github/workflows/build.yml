@@ -42,7 +42,7 @@ jobs:
 
       - name: Create ZIP
         run: |
-          Compress-Archive -Path dist/ATC_Advisor.exe -DestinationPath ATC_Advisor.zip
+          Compress-Archive -Path src/dist/ATC_Advisor.exe -DestinationPath ATC_Advisor.zip
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
