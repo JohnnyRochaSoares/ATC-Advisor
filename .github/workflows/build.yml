@@ -24,12 +24,9 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
-      - name: Build executable (PyInstaller)
-        run: |
-          pyinstaller --onefile --windowed ^
-            --name ATC_Advisor ^
-            --icon="assets/ATC Advisor.ico" ^
-            src/main.py
+      - name: Build executable
+ 	run: |
+	  pyinstaller --onefile --windowed --name ATC_Advisor --icon "assets/ATC Advisor.ico" src/main.py
 
       - name: Create ZIP
         run: |
