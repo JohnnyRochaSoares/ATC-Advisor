@@ -145,7 +145,6 @@ ATC Advisor/
 
    └── main.py
 
-
    ├── core/
 
    │   ├── distance.py
@@ -163,9 +162,11 @@ ATC Advisor/
    └── ui/
 
 
-&#x09;├── app.py
+&#x20;      ├── app.py
 
-	└── languages.py
+
+
+&#x20;      └── languages.py
 
 ```
 
