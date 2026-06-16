@@ -161,12 +161,9 @@ ATC Advisor/
 
    └── ui/
 
+       ├── app.py
 
-&#x20;      ├── app.py
-
-
-
-&#x20;      └── languages.py
+       └── languages.py
 
 ```
 
